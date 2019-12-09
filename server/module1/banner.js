@@ -35,7 +35,7 @@ define(()=>{
             this.banner = document.querySelector('#banner .banner');
             this.index = 0;
             this.iPrev = this.aimg.length-1;
-            this.addEvent()
+            this.addEvent();
             this.init();
         }
         init(){
