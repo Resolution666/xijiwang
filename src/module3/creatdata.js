@@ -15,6 +15,9 @@ define(()=>{
         }
         display(){
             let u = location.search;
+            if(location.search == ""){
+                location.href = "../index.html"
+            }
             const reg = /id=(\d+)/
             let index = reg.exec(u)[1]
             let str = ``;

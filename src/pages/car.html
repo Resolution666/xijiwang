@@ -34,7 +34,7 @@
     <header class="margin" id="head">
         <div class="ht">
             <div class="img">
-                <img src="../img/logo4.png" alt="">
+                <a href="../index.html"><img src="../img/logo4.png" alt=""></a>
             </div>
             <div class="h-c">
                 <div class="h-c-t">
@@ -204,34 +204,32 @@
                     <th width="69">全选<input type="checkbox" ></th>
                     <th colspan="3" width="270">商品</th>
                     <th width="142">销售价</th>
-                    <th width="142">数量</th>
-                    <th width="182">小计</th>
+                    <th width="142">小计</th>
+                    <th width="182">数量</th>
                     <th width="142">操作</th>
                 </tr>
             </thead>
             <tbody>
                 <tr height="100">
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" class="ck"></td>
                     <td width="80"><img src="../img/img3.jpg" alt=""></td>
                     <td>Tumi 塔米/途明 Alpha Bravo系列 Travis 男士单肩斜挎包 103295 双色可选</td>
                     <td width="180">颜色：Black</td>
                     <td>￥1900.00</td>
+                    <td class="price">￥411865.00</td>
                     <td><input type="number" class="num" min="1" value="1"></td>
-                    <td>￥411865.00</td>
-                    <td><span>删除</span></td>
+                    <td class="delete">删除</td>
                 </tr>
             </tbody>
             <tfoot>
                 <tr height="60">
                     <td></td>
                     <td colspan="3"></td>
-                    <td>已选择<span>1</span>件</td>
-                    <td colspan="2">总价：<span>11651.000</span></td>
+                    <td>已选择<span class="number">0</span>件</td>
+                    <td colspan="2">总价：<span class="price">0.000</span></td>
                     <td><span class="jiesuan">去结算</span></td>
                 </tr>
             </tfoot>
-            
-            
         </tbody>
         </table>
 
@@ -309,5 +307,6 @@
         </div>
     </div>
 </body>
-
+<script src="../js/public.js"></script>
+<script src="../lib/require.js" data-main="../js/car.js"></script>
 </html>
