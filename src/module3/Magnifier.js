@@ -1,5 +1,4 @@
 define(()=>{
-    'use strict';
     class Magnifier {
         constructor() {
             this.imgbox = document.querySelector('main .imgbox');
@@ -9,6 +8,7 @@ define(()=>{
             this.simg = document.querySelectorAll('main .sbox li');
             this.bbox = document.querySelector('main .bbox');
             this.bimg = document.querySelector('main .bbox img');
+            // console.log(this.imgbox)
             this.addEvent()
         }
         addEvent(){

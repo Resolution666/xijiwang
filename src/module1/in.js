@@ -2,10 +2,9 @@ define(()=>{
     class Index{
         constructor(){
             this.login = document.querySelector(".login");
-            this.welcome = document.querySelector(".welcome");
-            this.user = this.welcome.querySelector("span");
-            this.exit = this.welcome.querySelector("em");
-            
+            this.exit = document.querySelector("header .exit");
+            console.log(this.exit)
+            console.log(this.login)
             this.getMsg();
             this.addEvent()
         }
@@ -19,17 +18,15 @@ define(()=>{
         }
         getMsg(){
             this.msg = getCookie("userMsg") ? JSON.parse(getCookie("userMsg")) : [];
-            
+            console.log(this.msg)
             this.i = null; 
             var type = this.msg.some((val,idx)=>{
                 this.i = idx;
                 return val.onoff === 1;
-            })
-            
+            })  
             if(type){
                 this.login.style.display = "none";
-                this.welcome.style.display = "block";
-                this.user.innerHTML = this.msg[this.i].user;
+                this.exit.style.display = "block";
             }
         }
     }

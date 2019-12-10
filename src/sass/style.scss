@@ -39,8 +39,17 @@ header{
                 a{background:url(../img/logo5.png) no-repeat;height:42px;width:60px;vertical-align: middle;border:none;display: inline-block;}
             }
             .h-c-t-c{float: left;margin-left: 60px;
+                display: flex;
+                a{font:12px/44px "";color:#212121;margin-left: 14px;float: left;
+                    &.login{
+                        display:block;
+                    }
+                    &.exit{
+                        display: none;
+                    }
+                }
                 i{background:url(../img/logo6.png) no-repeat;height:24px;width:24px;vertical-align: middle;border:none;display: inline-block;}
-                a{font:12px/44px "";color:#212121;margin-left: 14px;}
+
             }
             .h-c-t-r{
                 float: left;margin-left: 70px;

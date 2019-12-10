@@ -1,7 +1,7 @@
 require.config({
-    baseUrl:"../module4",
+    baseUrl:"../module6",
     paths:{
-        m:"m1-l",
+        m:"display",
     }
 })
 require(["m"],(b)=>{    

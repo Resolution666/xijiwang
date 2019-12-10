@@ -14,5 +14,5 @@ require(["banner","creat","tab","in"],(b,c,t,i)=>{
     new b;
     new c;
     new t;
-    // new i;
+    new i;
 });
