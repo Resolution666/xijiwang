@@ -3,8 +3,6 @@ define(()=>{
         constructor(){
             this.login = document.querySelector(".login");
             this.exit = document.querySelector("header .exit");
-            console.log(this.exit)
-            console.log(this.login)
             this.getMsg();
             this.addEvent()
         }
@@ -18,7 +16,6 @@ define(()=>{
         }
         getMsg(){
             this.msg = getCookie("userMsg") ? JSON.parse(getCookie("userMsg")) : [];
-            console.log(this.msg)
             this.i = null; 
             var type = this.msg.some((val,idx)=>{
                 this.i = idx;

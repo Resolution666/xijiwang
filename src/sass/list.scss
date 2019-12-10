@@ -88,12 +88,18 @@ header{
 #main{
     overflow: hidden;
     .box{
+        margin-left: 3px;
         padding:10px;
         float: left;
         height:340px;
         width:215px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+        }
         img{
             height:195px;width:195px;
         }

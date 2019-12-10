@@ -3,7 +3,6 @@ define(()=>{
         constructor(){
             this.ali = document.querySelectorAll('.m-l-t-c li');
             this.abox = document.querySelectorAll('.m-l-t-b .box');
-            console.log(this.abox)
             this.addEvent();
         }
         addEvent(){

@@ -91,10 +91,12 @@ header{
         width:100%;
         text-align: left;
         font:30px/30px "";
+        margin-bottom: 10px;
     }
     table{
         color:#999;
         thead{
+            background:#fff;
             border-top:2px solid #000;
             td{
                 text-align: center;
@@ -107,9 +109,14 @@ header{
             }
         }
         tbody{
-            margin-top: 14px;
+            margin-top: 30px;
+            background:#fff;
             img{width:80px;height:80px;}
+            tr td{
+                
+            }
             td{
+                
                 text-align: center;
                 &.delete{
                     cursor: pointer;
@@ -124,6 +131,7 @@ header{
             }
         }
         tfoot{
+            background:#fff;
             tr{
                 td{
                     text-align: center;
