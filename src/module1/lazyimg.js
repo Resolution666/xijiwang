@@ -1,11 +1,9 @@
 define(()=>{
     class LazyImg {
         constructor() {
-            console.log(1)
             this.aimg = document.querySelectorAll('img[lazy]');
             this.arr = Array.from(this.aimg)
             this.clientH = document.documentElement.clientHeight;
-            console.log(this.arr)
             this.laz()
         }
         laz(){
@@ -25,7 +23,6 @@ define(()=>{
             }
             this.lazyLoad();
             onscroll = ()=>{
-                console.log(1)
                 this.lazyLoad();
             }
         }

@@ -11,7 +11,6 @@ define(()=>{
             this.box5= document.querySelector('.m2-b-l .box1 ul');
             this.box6= document.querySelector('.m2-b-r .box1 ul');
             this.box7= document.querySelectorAll('main .box1 ul');
-            console.log(this.box7)
             this.url = "http://localhost:81/data/data.json"
             this.load();
         }

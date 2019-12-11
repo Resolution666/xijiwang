@@ -4,12 +4,14 @@ require.config({
         creat:"creatdata",
         m:"Magnifier",
         l:"addlist",
-        c:"../js/cookie.js"
+        c:"../js/cookie.js",
+        in:"in"
     }
 })
-require(["creat","m","l"],(c,l,m)=>{    
+require(["creat","m","l","in"],(c,l,m,n)=>{    
 console.log("所有模块加载完成");
 new c;
+new n;
 setTimeout(()=>{
     new l;
     new m;
