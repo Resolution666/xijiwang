@@ -10,6 +10,8 @@ define(()=>{
             this.box4= document.querySelector('.m2-t-r .box1 ul');
             this.box5= document.querySelector('.m2-b-l .box1 ul');
             this.box6= document.querySelector('.m2-b-r .box1 ul');
+            this.box7= document.querySelectorAll('main .box1 ul');
+            console.log(this.box7)
             this.url = "http://localhost:81/data/data.json"
             this.load();
         }
@@ -24,6 +26,8 @@ define(()=>{
                 this.display4();
                 this.display5();
                 this.display6();
+                this.display7();
+                this.display8();
             })
             
         }
@@ -33,10 +37,10 @@ define(()=>{
                 str += `<li>
                 <div class="data">
                     <div class="d-img">
-                    <a href="#"><img src="${this.res[i].goods_big_logo}" alt=""></a>
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}"><img lazy="${this.res[i].goods_big_logo}" alt=""></a>
                     </div>
                     <div class="d-name">
-                        <a href="#">
+                        <a href="pages/detail.html?id=${this.res[i].goods_id}">
                             ${this.res[i].goods_name} 
                         </a>
                     </div>
@@ -54,10 +58,10 @@ define(()=>{
                 str += `<li>
                 <div class="data">
                     <div class="d-img">
-                    <a href="#"><img src="${this.res[i].goods_big_logo}" alt=""></a>
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}"><img lazy="${this.res[i].goods_big_logo}" alt=""></a>
                     </div>
                     <div class="d-name">
-                        <a href="#">
+                        <a href="pages/detail.html?id=${this.res[i].goods_id}">
                             ${this.res[i].goods_name} 
                         </a>
                     </div>
@@ -75,10 +79,10 @@ define(()=>{
                 str += `<li>
                 <div class="data">
                     <div class="d-img">
-                    <a href="#"><img src="${this.res[i].goods_big_logo}" alt=""></a>
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}"><img lazy="${this.res[i].goods_big_logo}" alt=""></a>
                     </div>
                     <div class="d-name">
-                        <a href="#">
+                        <a href="pages/detail.html?id=${this.res[i].goods_id}">
                             ${this.res[i].goods_name} 
                         </a>
                     </div>
@@ -96,10 +100,10 @@ define(()=>{
                 str += `<li>
                 <div class="data">
                     <div class="d-img">
-                    <a href="#"><img src="${this.res[i].goods_big_logo}" alt=""></a>
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}"><img lazy="${this.res[i].goods_big_logo}" alt=""></a>
                     </div>
                     <div class="d-name">
-                        <a href="#">
+                        <a href="pages/detail.html?id=${this.res[i].goods_id}">
                             ${this.res[i].goods_name} 
                         </a>
                     </div>
@@ -116,10 +120,10 @@ define(()=>{
             for(let i = 10;i<15;i++){
                 str += ` <li>
                 <div class="m-box">
-                    <a href="#" class="img">
-                        <img src="${this.res[i].goods_big_logo}" alt="">
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}" class="img">
+                        <img lazy="${this.res[i].goods_big_logo}" alt="">
                     </a>
-                    <a href="#" class="title">
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}" class="title">
                         ${this.res[i].goods_name}
                     </a>
                     <span class="price">￥${this.res[i].goods_price}</span>
@@ -133,10 +137,10 @@ define(()=>{
             for(let i = 15;i<20;i++){
                 str += ` <li>
                 <div class="m-box">
-                    <a href="#" class="img">
-                        <img src="${this.res[i].goods_big_logo}" alt="">
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}" class="img">
+                        <img lazy="${this.res[i].goods_big_logo}" alt="">
                     </a>
-                    <a href="#" class="title">
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}" class="title">
                         ${this.res[i].goods_name}
                     </a>
                     <span class="price">￥${this.res[i].goods_price}</span>
@@ -150,10 +154,10 @@ define(()=>{
             for(let i = 20;i<25;i++){
                 str += ` <li>
                 <div class="m-box">
-                    <a href="#" class="img">
-                        <img src="${this.res[i].goods_big_logo}" alt="">
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}" class="img">
+                        <img lazy="${this.res[i].goods_big_logo}" alt="">
                     </a>
-                    <a href="#" class="title">
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}" class="title">
                         ${this.res[i].goods_name}
                     </a>
                     <span class="price">￥${this.res[i].goods_price}</span>
@@ -167,10 +171,10 @@ define(()=>{
             for(let i = 25;i<30;i++){
                 str += ` <li>
                 <div class="m-box">
-                    <a href="#" class="img">
-                        <img src="${this.res[i].goods_big_logo}" alt="">
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}" class="img">
+                        <img lazy="${this.res[i].goods_big_logo}" alt="">
                     </a>
-                    <a href="#" class="title">
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}" class="title">
                         ${this.res[i].goods_name}
                     </a>
                     <span class="price">￥${this.res[i].goods_price}</span>
@@ -178,6 +182,46 @@ define(()=>{
             </li>`
             }
             this.box6.innerHTML = str;
+        }
+        display7(){
+            let str = "";
+            for(let i = 30;i<33;i++){
+                str += ` <li>
+                <a href="pages/detail.html?id=${this.res[i].goods_id}"><img lazy="${this.res[i].goods_big_logo}" alt=""></a>
+                <div class="box-right">
+                <div class="title">
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}">
+                    ${this.res[i].goods_name} 
+                    </a>
+                </div>
+                <div class="price">
+                    <span>￥${this.res[i].goods_price}</span>
+                    <span>券后价</span>
+                </div>
+                </div>
+            </li>`
+            }
+            this.box7[0].innerHTML = str;
+        }
+        display8(){
+            let str = "";
+            for(let i = 33;i<36;i++){
+                str += ` <li>
+                <a href="pages/detail.html?id=${this.res[i].goods_id}"><img lazy="${this.res[i].goods_big_logo}" alt=""></a>
+                <div class="box-right">
+                <div class="title">
+                    <a href="pages/detail.html?id=${this.res[i].goods_id}">
+                    ${this.res[i].goods_name} 
+                    </a>
+                </div>
+                <div class="price">
+                    <span>￥${this.res[i].goods_price}</span>
+                    <span>券后价</span>
+                </div>
+                </div>
+            </li>`
+            }
+            this.box7[1].innerHTML = str;
         }
     }
     

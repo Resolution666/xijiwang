@@ -6,10 +6,11 @@ require.config({
             tab:"tab",
             in:"in",
             time:"time",
-            three:"three"
+            three:"three",
+            lazy:"lazyimg"
         }
 })
-require(["banner","creat","tab","in","time","three"],(b,c,t,i,e,h)=>{ 
+require(["banner","creat","tab","in","time","three","lazy"],(b,c,t,i,e,h,g)=>{ 
     console.log("所有模块加载完成");
     new b;
     new c;
@@ -17,4 +18,7 @@ require(["banner","creat","tab","in","time","three"],(b,c,t,i,e,h)=>{
     new i;
     new e;      
     new h;
+    setTimeout(()=>{
+        new g;
+    },100)  
 });
