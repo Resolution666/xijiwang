@@ -14,14 +14,23 @@ define(()=>{
             
         }
         display1(){
+            let u = location.search;
+            if(location.search == ""){
+                location.href = "../index.html"
+            }
+            const reg = /wd=(.+)/
+            let index = reg.exec(u)[1]
+            var a = decodeURI(index)
             let str = "";
             for(let i = 0;i<this.res.length;i++){
-                str += `<div class="box">
-                <a href="detail.html?id=${this.res[i].goods_id}"><img src="${this.res[i].goods_big_logo}" alt=""></a>
-                <p class="price">￥${this.res[i].goods_price}</p>
-                <a href="detail.html?id=${this.res[i].goods_id}" class="name">${this.res[i].goods_name}</a>
-                <div class="s"><span>自营</span><span>海外</span><span>直邮</span></div>
-            </div>`
+                if(this.res[i].goods_name.includes(decodeURI(index))){
+                    str += `<div class="box">
+                    <a href="detail.html?id=${this.res[i].goods_id}"><img src="${this.res[i].goods_big_logo}" alt=""></a>
+                    <a href="detail.html?id=${this.res[i].goods_id}" class="name">${this.res[i].goods_name}</a>
+                    <p class="price">￥${this.res[i].goods_price}</p>
+                    <div class="s"><span>自营</span><span>海外</span><span>直邮</span></div>
+                </div>`
+                }
             }
             this.box.innerHTML = str;
         }

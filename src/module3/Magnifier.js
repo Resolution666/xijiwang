@@ -1,6 +1,7 @@
 define(()=>{
     class Magnifier {
         constructor() {
+
             this.imgbox = document.querySelector('main .imgbox');
             this.img = document.querySelector('main .imgbox img');
             this.span = document.querySelector('main .imgbox span');

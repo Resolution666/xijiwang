@@ -7,12 +7,13 @@ require.config({
             in:"in",
             time:"time",
             three:"three",
-            lazy:"lazyimg",
+            lazy:"lazyimg",         
             jq:"../lib/jquery",
-            fl:"floor"
+            fl:"floor",
+            sch:"search"
         }
 })
-require(["banner","creat","tab","in","time","three","lazy","jq","fl"],(b,c,t,i,e,h,g,_,f)=>{ 
+require(["banner","creat","tab","in","time","three","lazy","jq","fl","sch"],(b,c,t,i,e,h,g,_,f,s)=>{ 
     console.log("所有模块加载完成");
     new b;
     new c;
@@ -21,6 +22,7 @@ require(["banner","creat","tab","in","time","three","lazy","jq","fl"],(b,c,t,i,e
     new e;      
     new h;
     new f;
+    new s;
     setTimeout(()=>{
         new g;
     },100)  

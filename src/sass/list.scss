@@ -124,6 +124,9 @@ header{
             height:195px;width:195px;
         }
         .price{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-top: 14px;
             width:215px;
         }

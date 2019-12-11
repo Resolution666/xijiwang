@@ -2,10 +2,11 @@
 
 define(()=>{
     class Creat {
-        constructor() {
+        constructor(cb) {
             this.box = document.querySelector('main');
             this.url = "http://localhost:81/data/data.json"
             this.load();
+            this.cb =cb;
         }
         load(){
             ajaxGet(this.url,(res)=>{
@@ -14,6 +15,7 @@ define(()=>{
             })
         }
         display(){
+            
             let u = location.search;
             if(location.search == ""){
                 location.href = "../index.html"
@@ -83,6 +85,7 @@ define(()=>{
                 }
             }
             this.box.innerHTML = str;
+            this.cb();
         }
     }
     return Creat;

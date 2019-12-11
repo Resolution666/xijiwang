@@ -10,7 +10,9 @@ define(()=>{
             var that = this;
             this.exit.onclick = function(){
                 that.msg[that.i].onoff = "0";
-                setCookie("userMsg",JSON.stringify(that.msg));
+                setCookie("userMsg",JSON.stringify(that.msg),{
+                    path:'/'
+                });
                 location.reload();
             }
         }

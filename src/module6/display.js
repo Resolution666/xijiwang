@@ -28,7 +28,6 @@ define(()=>{
                     that.changeCookie(function(i){
                         that.goods.splice(i,1);
                     });
-
                 } 
             })
             this.tbody.addEventListener("input",function(eve){

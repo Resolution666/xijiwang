@@ -10,12 +10,10 @@ require.config({
 })
 require(["creat","m","l","in"],(c,l,m,n)=>{    
 console.log("所有模块加载完成");
-new c;
-new n;
-setTimeout(()=>{
+new c(function(){
     new l;
     new m;
-},200)
-
+});
+new n
 });
 
