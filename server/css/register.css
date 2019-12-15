@@ -1,0 +1,86 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  background: #f5f5f5; }
+
+#login {
+  height: 752px;
+  width: 542px;
+  border: 1px solid #d8d8d8;
+  display: flex;
+  flex-direction: column; }
+  #login .top {
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #eee; }
+    #login .top img {
+      height: 35px;
+      width: 145px;
+      margin-left: 20px;
+      margin-top: 20px; }
+  #login .box {
+    text-align: center;
+    margin-top: 40px; }
+    #login .box h3 {
+      font-size: 24px;
+      color: #ED5831; }
+  #login .box2 {
+    margin-top: 40px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #login .box2 .id {
+      margin-top: 20px;
+      height: 40px;
+      width: 400px;
+      border: 1px solid #e4e4e4;
+      font: 12px/30px ""; }
+    #login .box2 .password {
+      margin-top: 20px;
+      height: 40px;
+      width: 400px;
+      border: 1px solid #e4e4e4;
+      font: 12px/30px ""; }
+    #login .box2 .password2 {
+      margin-top: 20px;
+      height: 40px;
+      width: 400px;
+      border: 1px solid #e4e4e4;
+      font: 12px/30px ""; }
+  #login .box3 {
+    margin-top: 40px;
+    display: flex; }
+    #login .box3 .remember {
+      margin-left: 90px;
+      vertical-align: middle; }
+    #login .box3 label {
+      margin-left: 20px; }
+  #login .box4 {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; }
+    #login .box4 .sub {
+      height: 40px;
+      width: 400px;
+      background: #ed5831;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font: 18px/40px ""; }
+  #login .box5 {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; }
+    #login .box5 a {
+      height: 40px;
+      width: 400px;
+      background: #ed5831;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font: 18px/40px "";
+      display: flex;
+      justify-content: center; }

@@ -15,11 +15,13 @@ define(()=>{
         }
         display1(){
             let u = location.search;
-            if(location.search == ""){
+            console.log(u)
+            if(location.search == "?wd="){
                 location.href = "../index.html"
             }
             const reg = /wd=(.+)/
             let index = reg.exec(u)[1]
+            
             var a = decodeURI(index)
             let str = "";
             for(let i = 0;i<this.res.length;i++){

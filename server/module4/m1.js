@@ -6,7 +6,6 @@ define(()=>{
             this.pass = document.querySelector(".password")
             this.reg = document.querySelector(".reg")
             this.log = document.querySelector(".sub")
-            this.span = document.querySelector("span")
             this.addEvent();
             console.log(this.user)
             console.log(this.pass)
@@ -33,6 +32,7 @@ define(()=>{
                     
                     this.msg[i].onoff = 1;
                     alert("登录成功")
+                    location.href = "../index.html"
                     setCookie("userMsg",JSON.stringify(this.msg),{
                         path:"/"
                     })
@@ -43,7 +43,7 @@ define(()=>{
                 }
             }
             if(type == 0){
-                this.span.innerHTML = "用户名不存在,请<a href='register.html'>注册</a>";
+                alert("用户名不存在,请注册);
             }
         }
     }
